@@ -82,15 +82,6 @@
 
 }
 
-- (void) enableZoom
-{
-    UIPinchGestureRecognizer *twoFingerPinch = [[UIPinchGestureRecognizer alloc]
-                                                 initWithTarget:self
-                                                 action:@selector(twoFingerPinch:)];
-    
-    [self addGestureRecognizer:twoFingerPinch];
-}
-
 - (instancetype) initWithFrame:(CGRect)frame
                           size:(int)size
                          color:(UIColor *)color
@@ -112,8 +103,6 @@
     self.isGridLinesVisible=isVisible;
     
     [self initDrawSetting];
-    
-    //[self enableZoom];
     
     return self;
 }
